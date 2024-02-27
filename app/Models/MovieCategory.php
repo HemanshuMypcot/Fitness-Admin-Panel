@@ -18,7 +18,7 @@ class MovieCategory extends Model implements HasMedia
         'season',
         'yt_link',
         'genre',
-];
+    ];
     protected $hidden =[
         'media'
     ];

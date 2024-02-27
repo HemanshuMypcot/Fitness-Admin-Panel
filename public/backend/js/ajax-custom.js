@@ -1,5 +1,8 @@
 /*Copyright (c) 2022, Mypcot Infotech (https://www.mypcot.com/) */
 // window.location.reload();
+
+// $('.file-upload').file_upload();
+
 $(document).on('click', '#sidebarToggle', function () {
     if($('body').hasClass('menu-expanded')) {
         $('.sidelogo').show();
@@ -245,7 +248,7 @@ function submitForm(form_id, form_method, errorOverlay = '') {
     if (window.FormData) {
         formdata = new FormData(form[0]);
     }
-    var can = 0;
+    var can = 0; 
     $('#' + form_id).find(".required").each(function(){
         var here = $(this);
         if (here.val() === '' || here.val().length === 0) {
@@ -433,7 +436,20 @@ function submitForm(form_id, form_method, errorOverlay = '') {
         $('a[href="#'+ih+'"]').click();
     }
 }
+$(document).on('change', '.file-input', function() {
+        
 
+    var filesCount = $(this)[0].files.length;
+    
+    var textbox = $(this).prev();
+  
+    if (filesCount === 1) {
+      var fileName = $(this).val().split('\\').pop();
+      textbox.text(fileName);
+    } else {
+      textbox.text(filesCount + ' files selected');
+    }
+  });
 function nl2br (str, is_xhtml) {
 
     var breakTag = (is_xhtml || typeof is_xhtml === 'undefined') ? '<br/>' : '<br>';

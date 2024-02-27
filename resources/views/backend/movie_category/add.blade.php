@@ -38,15 +38,15 @@
                                                     </div>
                                                     <div class="col-sm-6">
                                                         <label>Name<span class="text-danger">*</span></label>
-                                                        <input class="form-control required" type="text" id="name" oninput="validateNameInput(this)" name="name"><br/>
+                                                        <input class="form-control required" type="text" id="name" oninput="validateNameInput(this)" name="name" required><br/>
                                                     </div>
                                                     <div class="col-sm-6" id="season">
                                                         <label>SEASON<span class="text-danger">*</span></label>
-                                                        <input class="form-control required integer-validation" type="number" id="season1" name="season"><br/>
+                                                        <input class="form-control required integer-validation" type="number" id="season1" name="season" required><br/>
                                                     </div>
-                                                    <div class="col-sm-6 youtube-url-validation" id="yt_link">
+                                                    <div class="col-sm-6" id="yt_link">
                                                         <label>YOUTUBE LINK<span class="text-danger">*</span></label>
-                                                        <input class="form-control required" type="url" id="yt_link1" name="yt_link"><br/>
+                                                        <input class="form-control required" type="url" id="yt_link1" name="yt_link" ><br/>
                                                     </div>
                                                     <div class="col-sm-6" id="checklist_wrapper">
                                                         <label>Genre :<span class="text-danger">*</span></label>

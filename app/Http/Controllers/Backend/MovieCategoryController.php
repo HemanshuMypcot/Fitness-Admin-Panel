@@ -96,6 +96,7 @@ class MovieCategoryController extends Controller
                         if (isset($request['search']['search_status']) && !is_null($request['search']['search_status'])) {
                             $query->where('status', 'like', "%" . $request['search']['search_status'] . "%");
                         }
+                        
                         // echo "<pre>";
                         // print_r($query);
                         // exit;
@@ -130,7 +131,7 @@ class MovieCategoryController extends Controller
                             if ($event->status == '1') {
                                 $actions .= ' <input type="checkbox" data-url="movie_categories/publish" id="switchery' . $event->id . '" data-id="' . $event->id . '" class="js-switch switchery" checked>';
                             } else {
-                                $actions .= ' <input type="checkbox" data-url="movie_categories/publish" id="switchery' . $event->id . '" data-id="' . $event->id . '" class="js-switch switchery">';
+                            $actions .= ' <input type="checkbox" data-url="movie_categories/publish" id="switchery' . $event->id . '" data-id="' . $event->id . '" class="js-switch switchery">';
                             }
                         }
                         $actions .= '</span>';
